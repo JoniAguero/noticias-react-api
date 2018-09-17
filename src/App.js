@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      noticias: {}
+      noticias: []
     }
 
   }
@@ -16,7 +16,7 @@ class App extends Component {
     this.getNoticias();
   }
 
-  getNoticias() {
+  getNoticias = () => {
     const url = 'https://newsapi.org/v2/top-headlines?' +
       'country=ar&' +
       'apiKey=1d01268cb056446083eefeee93e25036';
@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="contenedor-app">
        <div className="container white contenedor-noticias">
-        <Noticias noticias={this.state.noticias} />
+        <Noticias noticias = {this.state.noticias} />
        </div>
       </div>
     );
