@@ -34,8 +34,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Noticias />
+      <div className="contenedor-app">
+       <div className="container white contenedor-noticias">
+        <Noticias noticias={this.state.noticias} />
+       </div>
       </div>
     );
   }
