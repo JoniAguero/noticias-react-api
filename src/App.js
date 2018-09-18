@@ -18,7 +18,7 @@ class App extends Component {
 
   getNoticias = () => {
     const url = 'https://newsapi.org/v2/top-headlines?' +
-      'country=ar&' +
+      'country=AR&' +
       'apiKey=1d01268cb056446083eefeee93e25036';
     const req = new Request(url);
     fetch(req)
