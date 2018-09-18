@@ -6,7 +6,7 @@ export class Formulario extends Component {
 
     changeCategory = (e) => {
         e.preventDefault();
-        console.log(this.categoryRef.current.value);
+        this.props.getNoticias(this.categoryRef.current.value)
     }
 
   render() {

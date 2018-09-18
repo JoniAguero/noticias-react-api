@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Header } from "./components/Header";
+// import { Header } from "./components/Header";
 import { Formulario } from './components/Formulario';
 import { Noticias } from "./components/Noticias";
 
@@ -19,10 +19,9 @@ class App extends Component {
     this.getNoticias();
   }
 
-  getNoticias = () => {
-    const url = 'https://newsapi.org/v2/everything?' +
-      'q=bitcoin&' +
-      'apiKey=1d01268cb056446083eefeee93e25036';
+  getNoticias = (category) => {
+
+    const url = `https://newsapi.org/v2/everything?q=${category}&apiKey=1d01268cb056446083eefeee93e25036`;
     const req = new Request(url);
     fetch(req)
       .then(function (response) {
@@ -34,13 +33,14 @@ class App extends Component {
         })
        });
   }
+  
 
   render() {
     return (
       <div className="contenedor-app"> 
         <div className="container white contenedor-noticias">
           {/* <Header title="Noticias" /> */}
-          < Formulario />
+          < Formulario getNoticias={this.getNoticias}/>
          <Noticias noticias = {this.state.noticias} />
         </div>
       </div>
