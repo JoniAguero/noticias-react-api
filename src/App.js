@@ -19,7 +19,7 @@ class App extends Component {
     this.getNoticias();
   }
 
-  getNoticias = (category) => {
+  getNoticias = (category = 'general') => {
 
     const url = `https://newsapi.org/v2/everything?q=${category}&apiKey=1d01268cb056446083eefeee93e25036`;
     const req = new Request(url);
