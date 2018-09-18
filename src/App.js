@@ -20,8 +20,8 @@ class App extends Component {
   }
 
   getNoticias = () => {
-    const url = 'https://newsapi.org/v2/top-headlines?' +
-      'country=AR&' +
+    const url = 'https://newsapi.org/v2/everything?' +
+      'q=bitcoin&' +
       'apiKey=1d01268cb056446083eefeee93e25036';
     const req = new Request(url);
     fetch(req)
