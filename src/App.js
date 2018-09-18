@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Header } from "./components/Header";
+import { Formulario } from './components/Formulario';
 import { Noticias } from "./components/Noticias";
 
 class App extends Component {
@@ -38,7 +39,8 @@ class App extends Component {
     return (
       <div className="contenedor-app"> 
         <div className="container white contenedor-noticias">
-          <Header title="Noticias" />
+          {/* <Header title="Noticias" /> */}
+          < Formulario />
          <Noticias noticias = {this.state.noticias} />
         </div>
       </div>
